@@ -1,0 +1,1 @@
+asciidoctor-pdf -b pdf intro_to_python_getting_started.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf intro_to_python_lessons.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf intro_to_python_workbook.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf PythonTutorial-SquaresAndFlowers-MS.adoc
