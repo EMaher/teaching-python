@@ -1,1 +1,3 @@
-asciidoctor-pdf -b pdf intro_to_python_getting_started.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf intro_to_python_lessons.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf intro_to_python_workbook.adoc asciidoctor-pdf -r asciidoctor-mathematical -r asciidoctor-diagram -b pdf PythonTutorial-SquaresAndFlowers-MS.adoc
+#! /bin/bash
+asciidoctor-pdf PythonTutorial-SquaresAndFlowers-MS.adoc -o PythonTutorial-SquaresAndFlowers-MS.pdf
+asciidoctor-pdf PythonTutorial-WhatsNext.adoc -o PythonTutorial-WhatsNext.pdf

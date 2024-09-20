@@ -7,7 +7,8 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-		"ghcr.io/rocker-org/devcontainer-features/pandoc:1": {}
+		"ghcr.io/rocker-org/devcontainer-features/pandoc:1": {},
+		"ghcr.io/devcontainers/features/ruby:1": {}
 	},
 	"customizations": {
 		"vscode": {
@@ -21,7 +22,7 @@
 				"ms-python.python"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -30,7 +31,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "python --version",
+	 "postCreateCommand": "gem install asciidoctor-pdf"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
