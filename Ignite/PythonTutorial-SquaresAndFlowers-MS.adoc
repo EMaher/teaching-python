@@ -1,6 +1,4 @@
 = Learn to Code with Python Turtle Mode: Squares and Flowers
-:doctype: book
-:show-link-uri: 
 :source-highlighter: highlight.js
 :author: @PlanetMaher
 
@@ -9,7 +7,7 @@
 1. Navigate to <https://trinket.io/turtle>.
 2. Delete all the code except for the first line `from turtle import *`
  
-TIP: Documentation for tutle package is at <https://docs.python.org/3/library/turtle.html>.
+TIP: Documentation for turtle package is at <https://docs.python.org/3/library/turtle.html>.
 
 == Lesson 1: The Basics
 
@@ -17,7 +15,18 @@ If you're new to programming, you might hear some new things—we're going to de
 Today, you're going to write your own computer program. A *program* is a set of instructions that tells a computer what to do. There's a lot of different types of programs, from apps on phones to what makes your computer run!
 Another word you might hear is *algorithm*. It sounds complicated, but you probably already know what it means. It's just a process—imagine if you had to teach a robot how to braid hair or put on a coat. How would you break it down into smaller pieces?
 
-We might use the term *object-oriented programming* too. This describes how the code works. An object is a package of operations and properties. For example, an object is like a dog. The breed, size or color of the dog is a property, and an operation would be when you tell it to sit, bark or fetch. Small Basic helps you with this by color coding, as you're about to see!
+We might use the term *object-oriented programming* too. This describes how the code works. An object is a package of *methods* (also called operations) and *properties*. 
+
+.Example of Object, Properties and Methods
+[%autowidth, %header,cols="m,a, m"]
+|===
+a| Term 
+a| Definition 
+a| Example
+| Object | A person, place, or thing. |  dog
+| Properties | Something that describes the object. | size, color, breed
+| Operations/Methods | An action the object can take. | sit, bark, fetch
+|===
 
 == Lesson 2: Hello, Turtle
 
@@ -25,28 +34,27 @@ Let's start with a very simple program!
 
 [source, python]
 ----
-import turtle
+import turtle 
 turtle.shape("turtle") 
 turtle.showturtle() 
-turtle.done()
+turtle.done() 
 ----
 
 Click the RUN button at the top.  What does it do?
 
+Let's talk about what is going on in our program.
+
 [source, python]
 ----
-import turtle
-
-#Set the shape of the thing drawing
-#Other options are: arrow, circle, square, triangle 
-turtle.shape("turtle") 
-
-#Have the turtle show itself
-turtle.showturtle()
-
-# Tells the computer the turtle is done drawing on the screen.
-turtle.done()
+import turtle #<.>
+turtle.shape("turtle") #<.>
+turtle.showturtle() #<.>
+turtle.done() #<.>
 ----
+<.> Gets the other code we need to create a Turtle program
+<.> Sets the shape property of the character drawing the picture . Other options are: arrow, circle, square, triangle.
+<.> Have the turtle show itself!
+<.> Tells the interpreter that the turtle is done drawing.
 
 == Lesson 3: Turtle Power!
 
@@ -54,24 +62,27 @@ Let's make that turtle move! Type the following code in Python:
 
 [source, python]
 ----
-turtle.forward(100) #move forward 100 pixels
-turtle.right(90) #turn 90 degrees to the right
+turtle.forward(100) #<.>
+turtle.right(90) #<.>
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 ----
+<.> The `forward()` method moves the turtle forward a certain number of pixels.  The `100` is an argument that tells the `forward()` method how many pixels we want our turtle to move.
+<.> The `right()` method rotates the turtle a certain number of degrees to the right.  The `90` is an argument that tells the `right()` method how many degrees we want our turtle to turn.
 
 TIP: To make this go a little faster, you can use copy and paste.  (Ctrl+C and Ctrl+V on Windows.)
 
+.Challenge!
+Can you make the turtle move in different directions?  If it can move to the right, can it move to the left?  Can you make your turtle move in the opposite direction of forward?
+
 Click the RUN button at the top.  What does it do?
 
-CHALLENGE QUESTION: Can you make Turtle move in a different direction?
-
+=== Modify the Turtle
 Want to make your square a little different? Here are some things you can try! Where do you think you would put them in the code?
 
-=== Modify the Turtle
 [%header, %autowidth, cols="25a,~a"]
 |===
 | Property | Code 
@@ -131,6 +142,7 @@ turtle.bgcolor("green")
 
 A *loop* is a type of programming where you tell the same code to run multiple times. It usually means you have a little less code to write! Today, we will use a `for` loop. There are other kinds of loops too.
 
+=== Create a square
 [source,python]
 ----
 for sides in range(1,5):
@@ -141,12 +153,11 @@ IMPORTANT: Indentation is very important in Python!
 
 Click the RUN button at the top.  What does it do?
 
-You might be wondering what sides in `range(1,5)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. We use this to tell the loop how many times to repeat.
+You might be wondering what `sides` in `range(1,5)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. We use this to tell the loop how many times to repeat.
 How does it work? This is where the `range(1,5)` comes in.  It creates a list of numbers: `(1,2,3,4)`.  (Range takes inclusive starting number, exclusive ending number.)  Every time it goes through the loop, the `sides` variable is assigned to the value of the next item in the list.  Since there are four items in the list, the code inside the for loop is executed for times. 
 
-TIP:
+
 .Instructor Note
-====
 If the range function is causing confusion, use the following code to demonstrate what is happening.
 
 [source,python]
@@ -158,12 +169,14 @@ for sides in range(1,5):
 
 turtle.hideturtle()
 ----
-====
 
 == Lesson 5: Loops in Loops in Loops!
 
-You can nest loops in one another—so one loop can run another loop. We’re going to use this technique to make a flowers from our squares!
+You can nest loops in one another—so one loop can run another loop. We're going to use this technique to make a flowers from our squares!
 
+=== Creating a flowers
+[source, python]
+----
 import turtle
 
 turtle.shape("turtle")
@@ -181,13 +194,43 @@ for squares in range(1,21):
     turtle.right(18)
     
 turtle.done()
+----
 
 Click the RUN button at the top.  What does it do?
  
+There may be some math concepts you're not familiar with—coding uses a lot of math, but you have lots of time in school to learn it!
 
-There may be some math concepts you’re not familiar with—coding uses a lot of math, but you have lots of time in school to learn it!
+=== Creating many flowers
 
-Challenge: Draw multiple randomly placed flowers
+.Challenge! 
+Try to draw multiple randomly placed flowers.
+
+To move the turtle without drawing a line, use the `penup()`, `goto(x-coordinate, y-coordinate)` and `pendown()` methods. 
+
+[source, python]
+----
+turtle.penup()
+turtle.goto(-50,50)
+turtle.pendown()
+----
+TIP: For the Turtle, `(0,0)` coordinate is in the middle of the screen.  This is unlinke other graphic libaries where `(0,0)` is the upper-left corner of the screen.
+
+To 'randomly' pick a coordinate, you'll need to help from the `random` library.
+
+[source, python]
+----
+import random
+----
+
+To create a random number use `randint` and give the lower and upper bound.
+[source, python]
+----
+import random.randint(-100, 100)
+----
+
+.Create 3 colored flowers
+[source, python]
+----
 import turtle 
 import random
 
@@ -199,7 +242,7 @@ turtle.color("blue")
 
 turtle.speed("fastest")  # Fastest speed
 
-for flower_color in ["red", "blue", "purple"]:
+for flower_color in ["red", "blue", "purple"]: #<.>
 
     turtle.penup()
     
@@ -207,46 +250,45 @@ for flower_color in ["red", "blue", "purple"]:
     turtle.pencolor(flower_color)
     turtle.color(flower_color)
 
+    #move the turtle to new center location for flower
     turtle.goto(random.randint(-100, 100),random.randint(-100, 100))
     
     turtle.pendown()
     
-    for squares in range(1,21):
-        for sides in range(1,5):
+    for squares in range(1,21): #<.>
+        for sides in range(1,5): #<.>
             turtle.forward(50)
             turtle.right(90)
         turtle.right(18)
     
 turtle.done()
+----
+<.> The first loop determines how many flower blossoms we're going to make and what color they will be.
+<.> The next loop creates 20 squares to creat a flower.
+<.> This loop creates the individual squares
+
 Click the RUN button at the top.  What does it do?
+
+
+== Lesson 6: Share your code!
+
+You can share your code! You can download the file for later or create a link to share.  Link will be in the format `https://trinket.io/turtle/{code}`
  
-The first loop determines how many flower blossoms we’re going to make and what color they will be. The next loop determines how big our flowers are going to be. The third loop determines the shape of the pedals
-Lesson 6: Share your code!
-You can share your code! You can download the file for later or create a link to share.
- 
- 
-Instructor note:  Students love sharing what they created.  Ask for teachers help to get the link code so you can show some of the students work.
-Lesson 7: Learn from others!
+TIP: _Instructor note!_  Students love sharing what they created.  Ask for teachers help to get the link code so you can show some of the students work.
+
+== Lesson 7: Learn from others!
 A great way to learn programming is to see what others have done.
-Try copying to code from https://pythondex.com/draw-lion-in-python  and see what it does.  WARNING: Don’t forget to save your own code in a file first!
-Challenges
-https://pythondex.com/draw-a-star-in-python-turtle
-https://pythondex.com/draw-hexagon-using-python
-https://pythondex.com/draw-a-star-in-python-turtle 
-HTTPS://PYTHONDEX.COM/DRAW-A-BIRD-IN-PYTHON-TURTLE-WITH-CODE
-HTTPS://PYTHONDEX.COM/DRAW-SMILEY-FACE-IN-PYTHON-TURTLE 
+Try copying to code from https://pythondex.com/draw-lion-in-python  and see what it does.  
 
-References
-https://docs.python.org/3/library/turtle.html
-https://pythongeeks.org/python-turtle/ 
-https://pythonsandbox.com/turtle  
-https://www.pythonclassroom.com/turtle-graphics 
-https://realpython.com/beginners-guide-python-turtle/ 
-# https://turtle.bloat.app/examples/
+WARNING: Don't forget to save your own code in a file first!
 
-Alternate sites: 
-https://pythonandturtle.com/turtle/,  
-https://python.fhgr.ch/turtle.html,  
-https://pythonsandbox.com/turtle
+== Appendix: Python turtle sites
 
-Warning: This website supports only a subset of what is available in the Turtle module.  You'll see not implemented warnings if this happens.
+<https://trinket.io/turtle> is the test site for programming with the Python turtle.
+
+The following sites also provide an online interpreter that supports the Turtle module.  However, these sites don't support the full turtle library.
+
+* <https://pythonandturtle.com/turtle/>
+* <https://python.fhgr.ch/turtle.html>
+* <https://pythonsandbox.com/turtle>
+* <https://pythondex.com/python-turtle-compiler>
