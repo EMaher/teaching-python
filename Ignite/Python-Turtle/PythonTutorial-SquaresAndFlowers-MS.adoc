@@ -7,6 +7,8 @@
 1. Navigate to <https://trinket.io/turtle>.
 2. Delete all the code except for the first line `from turtle import *`
  
+image::Images/PythonTutorial-Trinket.svg[trinket.io//turtle]
+
 TIP: Documentation for turtle package is at <https://docs.python.org/3/library/turtle.html>.
 
 == Lesson 1: The Basics
@@ -75,10 +77,14 @@ turtle.forward(100)
 
 TIP: To make this go a little faster, you can use copy and paste.  (Ctrl+C and Ctrl+V on Windows.)
 
+Click the RUN button at the top.  What does it do?
+
+image::Images/PythonTutorial-SquareCode.svg[]
+
 .Challenge!
 Can you make the turtle move in different directions?  If it can move to the right, can it move to the left?  Can you make your turtle move in the opposite direction of forward?
 
-Click the RUN button at the top.  What does it do?
+
 
 === Modify the Turtle
 Want to make your square a little different? Here are some things you can try! Where do you think you would put them in the code?
@@ -156,7 +162,6 @@ Click the RUN button at the top.  What does it do?
 You might be wondering what `sides` in `range(1,5)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. We use this to tell the loop how many times to repeat.
 How does it work? This is where the `range(1,5)` comes in.  It creates a list of numbers: `(1,2,3,4)`.  (Range takes inclusive starting number, exclusive ending number.)  Every time it goes through the loop, the `sides` variable is assigned to the value of the next item in the list.  Since there are four items in the list, the code inside the for loop is executed for times. 
 
-
 .Instructor Note
 If the range function is causing confusion, use the following code to demonstrate what is happening.
 
@@ -198,7 +203,7 @@ turtle.done()
 
 Click the RUN button at the top.  What does it do?
  
-There may be some math concepts you're not familiar with—coding uses a lot of math, but you have lots of time in school to learn it!
+image::Images/PythonTutorial-FlowerCode.svg[]
 
 === Creating many flowers
 
@@ -269,22 +274,31 @@ turtle.done()
 
 Click the RUN button at the top.  What does it do?
 
+image::Images/PythonTutorial-ManyFlowersCode.svg[]
 
 == Lesson 6: Share your code!
 
-You can share your code! You can download the file for later or create a link to share.  Link will be in the format `https://trinket.io/turtle/{code}`
+You can share your code! You can download the file for later or create a link to share.  
+
+image::Images/PythonTutorial-TrinketShareCode.svg[]
+
+Link will be in the format `https://trinket.io/turtle/{code}`
+
+image::Images/PythonTutorial-TrinketShareCodeLink.svg[]
  
 TIP: _Instructor note!_  Students love sharing what they created.  Ask for teachers help to get the link code so you can show some of the students work.
 
 == Lesson 7: Learn from others!
+
 A great way to learn programming is to see what others have done.
-Try copying to code from https://pythondex.com/draw-lion-in-python  and see what it does.  
+
+Try the code from https://pythondex.com/draw-lion-in-python and see what it does.  
 
 WARNING: Don't forget to save your own code in a file first!
 
-== Appendix: Python turtle sites
+== Appendix: Alternate Python turtle sites
 
-<https://trinket.io/turtle> is the test site for programming with the Python turtle.
+<https://trinket.io/turtle> is the best site for programming with the Python turtle.
 
 The following sites also provide an online interpreter that supports the Turtle module.  However, these sites don't support the full turtle library.
 
