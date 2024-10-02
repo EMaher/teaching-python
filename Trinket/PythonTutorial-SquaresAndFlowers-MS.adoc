@@ -1,6 +1,5 @@
 = Learn to Code with Python Turtle Mode: Squares and Flowers
 :source-highlighter: highlight.js
-:author: @PlanetMaher
 
 == Setup
 
@@ -14,7 +13,9 @@ TIP: Documentation for turtle package is at <https://docs.python.org/3/library/t
 == Lesson 1: The Basics
 
 If you're new to programming, you might hear some new things—we're going to define them here for you!
+
 Today, you're going to write your own computer program. A *program* is a set of instructions that tells a computer what to do. There's a lot of different types of programs, from apps on phones to what makes your computer run!
+
 Another word you might hear is *algorithm*. It sounds complicated, but you probably already know what it means. It's just a process—imagine if you had to teach a robot how to braid hair or put on a coat. How would you break it down into smaller pieces?
 
 We might use the term *object-oriented programming* too. This describes how the code works. An object is a package of *methods* (also called operations) and *properties*. 
@@ -83,8 +84,6 @@ image::Images/PythonTutorial-SquareCode.svg[]
 
 .Challenge!
 Can you make the turtle move in different directions?  If it can move to the right, can it move to the left?  Can you make your turtle move in the opposite direction of forward?
-
-
 
 === Modify the Turtle
 Want to make your square a little different? Here are some things you can try! Where do you think you would put them in the code?
