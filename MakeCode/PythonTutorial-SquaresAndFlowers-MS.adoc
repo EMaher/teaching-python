@@ -287,5 +287,8 @@ Any skill level can use the MakeCode website as supports block programming as we
 * Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] and create https://arcade.makecode.com/:[arcade games]. 
 * Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
 * Checkout https://arcade.makecode.com/courses/[online courses].
-* Use https://arcade.makecode.com/docs[MakeCode Arcade Documentation] as a reference.
+
+=== References
+* https://arcade.makecode.com/docs[MakeCode Arcade Documentation].
+* https://github.com/microsoft/pxt-screen-turtle[Turtle Extension] information and guided tutorials.
 
