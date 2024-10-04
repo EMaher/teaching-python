@@ -12,8 +12,8 @@ configurationStart;Unit=smInches;Dpi=96;Division=4;Grid=True;Zoom=0.5;CanvasW=11
 <tspan x="100" y="107">3. Full screen</tspan>
 <tspan x="100" y="126">4. Search for functions</tspan>
 <tspan x="100" y="145">5. Editor mode</tspan>
-<tspan x="100" y="164">6. Turtle extension</tspan>
-<tspan x="100" y="183">7. Text editor</tspan>
+<tspan x="100" y="164">6. Text editor</tspan>
+<tspan x="100" y="183">7. Turtle extension</tspan>
 </text>
 <circle style="fill:none;stroke:#FFC107; stroke-width:2" cx = "100" cy = "100" r = "0.5208333in" transform = "matrix(0.3274262,0,0,0.3274265,37.88757,642.886)" vector-effect="non-scaling-stroke" pen = "0.3274269,0.327427" />
 <g id="group_2">
