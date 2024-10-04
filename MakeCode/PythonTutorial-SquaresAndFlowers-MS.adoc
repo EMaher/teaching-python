@@ -4,10 +4,8 @@
 == Setup
 
 . Navigate to <https://arcade.makecode.com/>
-. https://arcade.makecode.com/identity/sign-in[Sign-in], if possible.  This step is not required.  If you do login your code will be automatic. Log in using your:
-.. https://account.microsoft.com/account[Microsoft Account]
-.. https://support.google.com/accounts/answer/14152768[Google Account] 
-.. School account supported by https://support.clever.com/hc/s/articles/360026162691?language=en_US[Clever]
+. https://arcade.makecode.com/identity/sign-in[Sign-in], if possible. +
+This step is not required.  If you do login your code will be automatic. Log in using your https://account.microsoft.com/account[Microsoft Account], https://support.google.com/accounts/answer/14152768[Google Account] or by using https://support.clever.com/hc/s/articles/360026162691?language=en_US[Clever].
 . Create a new project.
 . Set the editor to 'Python'mode.
 . Add the 'Turtle' Extension
