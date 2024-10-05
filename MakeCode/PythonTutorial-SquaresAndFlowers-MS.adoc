@@ -14,7 +14,7 @@ This step is not required.  If you do login your code will be automatic. Log in 
     .. Select the `turtle-logo` extension
 
 .MakeCode Arcade editor with `turtle-logo` extension
-image::Images/MakeCode-Editor-PythonMode.svg[]
+image::Images/MakeCode-Editor-PythonMode.png[]
 
 == Lesson 1: The Basics 
 
@@ -26,7 +26,7 @@ Today, you're going to write your own computer program. A *program* is a set of 
 
 Another word you might hear is *algorithm*. It sounds complicated, but you probably already know what it means. It's just a process—imagine if you had to teach a robot how to braid hair or put on a coat. How would you break it down into smaller pieces?
 
-We might also use the term *object-oriented programming*. This describes how the code works. An object is a package of *methods* (also called operations) and *properties*. 
+We might also use the term *object-oriented programming*. This describes how the code works. An object is a package of *methods* and *properties*. 
 
 .Example of Object, Properties and Methods
 [%autowidth, %header,cols="m,a, m"]
@@ -36,7 +36,7 @@ a| Definition
 a| Example
 | Object | A person, place, or thing. |  dog
 | Properties | Something that describes the object. | size, color, breed
-| Operations/Methods | An action the object can take. | sit, bark, fetch
+| Methods | An action the object can take. | sit, bark, fetch
 |===
 
 Lesson 2: Hello, Turtle 
@@ -85,7 +85,8 @@ Can you make the turtle move in different directions?  If it can move to the rig
 
 There are other actions your turtle can perform.
 
-[%header, %autowidth, cols="35a,~a"]
+.Actions your turtle can perform
+[%header, %autowidth, cols="30a,~a"]
 |===
 | Action | Code 
 | Talk
@@ -116,21 +117,41 @@ turtle.set_position_cartesian(10, 10)
 # Same as turtle.set_position_cartesian(0, 0)
 turtle.home()
 ----
-| Start/stop drawing lines
+| Start/stop drawing lines.
 |
 [source, python]
 ----
-# Start drawing lines.
+# Pull the pen up so when turtle moves no lines are drawn.
 turtle.pen(TurtlePenMode.UP)
 
-# Stop drawing lines.
+# Pull the pen down so when turtle moves no lines are drawn.
 turtle.pen(TurtlePenMode.DOWN)
+----
+| Turn turtle.
+|
+[source, python]
+----
+# Turn right 90 degrees
+turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 90)
+
+# Turn left in a full circle
+turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.LEFT, 360)
+----
+| Move turtle.
+|
+[source, python]
+----
+# Move turtle forward 25 pixels
+turtle.move_turtle_direction(TurtleDirection.FORWARD, 25)
+
+# Move turtle backward 10 pixels
+turtle.move_turtle_direction(TurtleDirection.FORWARD, 10)
 ----
 |===
 
 === Modify the Turtle
 
-Want to make your square a little different? Here are some things you can try! Where do you think you would put them in the code?
+Want to make your square a little different? Here are some things you can try! Where do you think you would put the method calls in the code?
 
 [%header, %autowidth, cols="25a,~a"]
 |===
@@ -140,6 +161,8 @@ Want to make your square a little different? Here are some things you can try! W
 [source, python]
 ----
 # Color can be number from 0 to 15.
+# 0 is white, 15 is black
+# Try out numbers 1-14.  What colors do you get?
 turtle.set_pen_color(1)
 ----
 
@@ -160,7 +183,7 @@ turtle.speed(1)
 # Color can be number from 0 to 15.
 scene.set_background_color(0)
 ----
-Did you notice that background color is part of the `scene` object and not the `turtle` object?
+IMPORTANT: Did you notice that background color is part of the `scene` object and not the `turtle` object?
 |===
 
 == Lesson 4: Loops 
@@ -181,13 +204,15 @@ IMPORTANT: Indentation is very important in Python!
 
 Click the image:Images/run_code.png[20,20] button.  What does it do? 
 
+image::Images/MakeCode-Turtle-Square.png[title="Turtle draws a square."]
+
 You might be wondering what is `sides` in `range(4)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. We use this to tell the loop how many times to repeat.
 
 How does it work? This is where the `range(4)` comes in.  It creates a list of numbers: `(0,1,2,3)`.  (Programmers like zero-based lists, which is why the list is 0-3 and not 1-4.)  Every time it goes through the loop, the `sides` variable is assigned to the value of the next item in the list.  Since there are four items in the list, the code inside the `for` loop is executed four times. 
 
 Click the image:Images/run_code.png[20,20] button.  What does it do? 
 
-One way to see this is to make a slight change to the code.  Did you know you can choose a random pen color? Remember colors are defined in MakeCode Arcade by integers (whole numbers) from 0 to 15. Let's update the code: 
+One way to see the effect of each loop this is to make a slight change to the code above.  Did you know you can choose a random pen color?  Let's try that. Remember colors are defined in MakeCode Arcade by integers (whole numbers) from 0 to 15. Let's update the code: 
 
 [source,python]
 ----
@@ -222,6 +247,8 @@ for pedals in range(20): #<.>
 
 Click the image:Images/run_code.png[20,20] button.  What does it do?
 
+image::Images/MakeCode-Turtle-Flower.png[title="Turtle draws a flower."]
+
 ====
 .Challenge!
 * Where would you put code to change the color of each side of the pedal? 
@@ -230,7 +257,6 @@ Click the image:Images/run_code.png[20,20] button.  What does it do?
 
 TIP: The number of `sides` or `pedals` multiplied by the degrees specified in `turn_turtle_direction_by_degrees` must equal 360.
 ====
-
 
 === Creating many flowers
 
@@ -268,7 +294,7 @@ Give your project a title.
 
 image::https://pxt.azureedge.net/blob/abd9a0f7df3bd4da6e999222d5aeb8874508f3a1/static/share/share-project.png[]
 
-Clicking "Share Project" will create a link to your project. Link will be in the format `https://makecode.com/{code}`
+Clicking "Share Project" will create a link to your project. The link will be in the format `https://makecode.com/{code}`
 
 image::https://pxt.azureedge.net/blob/6e0bad39fe9657c51ec93e5bd0344c93c71d0100/static/share/anon-share-link.png[]
 
@@ -278,15 +304,13 @@ TIP: _Instructor note!_  If time allows, use the share links to show what studen
 
 == Lesson 7: Learn from others! 
 
-Learn more about programming at <https://makecode.org>! 
+Learn more about programming at <https://makecode.org>! Any skill level can use the MakeCode website.  It supports block programming, Python, and JavaScript.  See https://arcade.makecode.com/courses/csintro1/intro/makecode-orientation[Getting Started with MakeCode].
 
-Any skill level can use the MakeCode website as supports block programming as well as Python.  See https://arcade.makecode.com/courses/csintro1/intro/makecode-orientation[Getting Started with MakeCode].
+image:https://pxt.azureedge.net/blob/9ab4abfcdff3405e5cca8a3c38e129aec2b363e3//static/logo.png[30,30]  Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] or https://arcade.makecode.com/courses/[online courses] and create https://arcade.makecode.com/:[arcade games].
 
-* Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] and create https://arcade.makecode.com/:[arcade games]. 
-* Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
-* Checkout https://arcade.makecode.com/courses/[online courses].
+image:https://th.bing.com/th/id/OIP.xRDh4mO8Q6q7eJ9CZ5c5swAAAA?w=140&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7[30,30] Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
 
 === References
 * https://arcade.makecode.com/docs[MakeCode Arcade Documentation].
-* https://github.com/microsoft/pxt-screen-turtle[Turtle Extension] information and guided tutorials.
+* https://arcade.makecode.com/pkg/mr-coxall/turtle-logo[Turtle Extension] information and guided tutorials.
 
