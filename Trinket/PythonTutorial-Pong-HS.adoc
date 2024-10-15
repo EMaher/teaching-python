@@ -26,11 +26,11 @@ Click the RUN button at the top.  What does it do?
 
 Before we go on, you should know a little bit about the `Screen` object.  Python Turtle uses coordinates to figure out where things go.  Like the Cartesian Plane you are used to in Algerbra, `0,0` is the coordinate in the center of the screen.
 
-[%noheader, grid=none, frame=none, %autowidth, cols="1%m,99%a"]
+
+[%noheader, grid=none, %autowidth, frame=none, cols="^.^m"]
 |===
-.2+>.^| X  
-| image::Images/PythonTurtle-Screen.svg[align="center"]
-^m| Y
+| X  image:Images/PythonTurtle-Screen.svg[align="center"]
+| Y
 |===
 
 [%header, %autowidth, cols="a,m,m"]
