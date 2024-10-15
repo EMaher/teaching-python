@@ -6,6 +6,5 @@
             "addWords": true,
             "scope": "workspace"
         }
-    },
-    "asciidoc.antora.enableAntoraSupport": true
+    }
 }

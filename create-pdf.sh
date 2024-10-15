@@ -1,4 +1,12 @@
 #!/bin/bash
+
+
+#for file in *.adoc; do
+#    if [ -f "$file" ]; then
+#        asciidoctor-pdf "$file" -o "PDF/${file%.[^.]*}.pdf"
+#    fi
+#done
+
 asciidoctor-pdf Trinket/PythonTutorial-SquaresAndFlowers-MS.adoc -o bin/Trinket/PythonTutorial-SquaresAndFlowers-MS.pdf
 asciidoctor-pdf Trinket/PythonTutorial-WhatsNext.adoc -o bin/Trinket/PythonTutorial-WhatsNext.pdf
 
