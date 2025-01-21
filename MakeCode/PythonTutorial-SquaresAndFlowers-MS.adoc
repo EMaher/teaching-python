@@ -39,8 +39,6 @@ a| Example
 | Methods | An action the object can take. | sit, bark, fetch
 |===
 
-Lesson 2: Hello, Turtle 
-
 == Lesson 2: Hello, Turtle
 
 Let's start with a very simple program!
