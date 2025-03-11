@@ -39,8 +39,6 @@ a| Example
 | Methods | An action the object can take. | sit, bark, fetch
 |===
 
-Lesson 2: Hello, Turtle 
-
 == Lesson 2: Hello, Turtle
 
 Let's start with a very simple program!
@@ -56,7 +54,7 @@ Click the image:Images/run_code.png[20,20] button.  What does it do?
 
 Let's make that turtle move! 
 
-IMPORTANT: Don't be intimidated by the length of the code below. Python programmers like to use descriptive names for their methods.  A method named `jump()` in one programming language is named `jump_as_high_as_possible()` in Python.
+NOTE: Don't be intimidated by the length of the code below. Python programmers like to use descriptive names for their methods.  A method named `jump()` in one programming language is named `jump_as_high_as_possible()` in Python.
 
 Type the following code in Python:
 
@@ -183,7 +181,7 @@ turtle.speed(1)
 # Color can be number from 0 to 15.
 scene.set_background_color(0)
 ----
-IMPORTANT: Did you notice that background color is part of the `scene` object and not the `turtle` object?
+NOTE: Did you notice that background color is part of the `scene` object and not the `turtle` object?
 |===
 
 == Lesson 4: Loops 

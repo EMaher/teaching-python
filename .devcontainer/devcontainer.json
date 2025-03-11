@@ -19,7 +19,8 @@
 				"ms-toolsai.jupyter",
 				"ms-python.vscode-pylance",
 				"ms-python.pylint",
-				"ms-python.python"
+				"ms-python.python",
+				"mathematic.vscode-pdf"
 			]
 		}
 	},

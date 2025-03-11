@@ -1,25 +1,30 @@
 = What's Next?
 
-== More Challenges
+====
+
+*More Turtle Challenges*
+
+Python Turtle Interpreter: <https://trinket.io/turtle>
 
 Follow these step-by-step challenges to create a bullseye or holiday tree.
 
 * <https://trinket.io/challenges/bullseye.html>
 * <https://trinket.io/challenges/holiday-tree.html>
 
-Learn from programs created by others.
+Learn from programs created by others.  
 
 * https://turtle.bloat.app/examples/
 * <https://pythondex.com/?s=python+turtle> (https://pythondex.com/draw-a-star-in-python-turtle:[Star], https://pythondex.com/draw-hexagon-using-python:[Hexagon], https://pythondex.com/draw-a-bird-in-python-turtle-with-code:[Bird], https://pyhondex.com/draw-smiley-face-in-python-turtle:[Turtle])
+====
 
-== Learning more Python
+====
+*Learning more Python*
+
 Here are some great how-to instructions for programming with the Python turtle.
 
 * <https://pythongeeks.org/python-turtle/>
 * <https://www.pythonclassroom.com/turtle-graphics>
 * <https://realpython.com/beginners-guide-python-turtle/>
-
-
 
 To learn more about the Python programming language, checkout:
 
@@ -27,13 +32,14 @@ To learn more about the Python programming language, checkout:
 * <https://hourofpython.com/>
 
 You can install a development environment and Python on your computer.  See https://code.visualstudio.com/docs/python/python-tutorial:[Getting Started with Python in VS Code].
+====
 
 ====
+*MakeCode*
+
 .Learn more about programming at <https://makecode.org>! 
 Any skill level can use the MakeCode website as supports block programming as well as Python.
 
 * Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] and create https://arcade.makecode.com/:[arcade games]. 
 * Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
 ====
-
-
