@@ -90,7 +90,7 @@ Lastly, we need to tell the controller to move our player.  This is done using a
 ----
 controller.move_sprite(dash_the_duck, 100, 100) <.>
 ----
-<.> `move_sprite` tells the `controller` object to move `dash the duck` at a speed of `100` horizontally and `100` vertically.
+<.> `move_sprite` tells the `controller` object to move `dash_the_duck` at a speed of `100` horizontally and `100` vertically.
 
 Our code now looks something like:
 [source, python]
@@ -106,8 +106,6 @@ controller.move_sprite(dash_the_duck, 100, 100)
 
 . Click the *Play* button to run your code. You should see Dash the Duck on the screen. Unfortunately, Dash won't move yet.  That's because we haven't set the maze yet.
 
-Did Dash go off the screen?  We will fix that later.
-
 == Lesson 3: Creating a Maze
 
 Let's start by making our maze.
@@ -118,21 +116,21 @@ Let's start by making our maze.
 ----
 tiles.set_tilemap(tilemap(""" """)) <.>
 ----
-<.> `tiles` is a variable that MakeCode created for us.  It's for tracking on the tiles of a map.
+<.> `tiles` is a variable that MakeCode created for us.  It's for tracking of the tiles of a map.
 
 . Click the gray map icone to the left of the code.
 +
 image::Images/Maze/MakeCode-Maze-TileMap-CreateStatement.png[]
 
 . When the image editor opens, use the tiles to create a maze. If you use the 'Forest' tiles, any tile with dirt is part of the path. Tiles with greenary will be used to form the walls. If you have time, you can use the all green tiles to fill in the extra space. Try using the *Fill* tool to fill in the empty space.
-+
-Don't forget to add something at the end of the maze so Dash has something to look forward to!  This maze has a nice patch of flowers at the end.
+
+. Don't forget to add something at the end of the maze so Dash has something to look forward to!  This maze has a nice patch of flowers at the end.
 +
 image::Images/Maze/MakeCode-Maze-TileMap-Background.png[]
 +
 IMPORTANT: The prize at the end of the maze must be a different type of tile than all other tiles in the maze.  This is important because we will use this tile to detect when Dash has reached the end of the maze.
 
-. Use the *Draw Walls* tools to tell the game where the walls are for the maze. The walls will show as semi-transparent red blocks in the image editor.
+. Use the *Draw Walls* tools to tell the game where the walls are for the maze. The walls will show as semi-transparent red blocks in the image editor. Dash won't be able to move through the walls.
 +
 image::Images/Maze/MakeCode-Maze-TileMap-Walls.png[]
 
@@ -154,7 +152,7 @@ tiles.set_current_tilemap(tilemap("""level0"""))
 
 . Click the *Play* button to run your code. Dash should be in the maze. Use the arrow keys to move Dash around the maze.  You'll notice that dash can't move through the walls.  This is because we set the walls in the maze using the *Draw Walls* tool when we created the maze.
 
-Did you notice that Dash can move off the screen?  Let's fix that now by telling the scene to follow the duck as it moves through the scene.
+Did you notice that Dash can move off the screen?  Let's fix that now by telling the scene to follow the duck as it moves through the scene. The *scene* is the variable that tracks what is displayed on the controller.
 
 [source, python]
 ----
@@ -214,12 +212,12 @@ scene.on_overlap_tile( <.>
     sprites.castle.tile_grass2,
     on_overlap_tile)
 ----
-<.> The `def` keyword is how functions are defined in python.  This function is called `on_overlap_tile`. It's common, but a little confusing to have the event name match the function name.  However, you can name the function what ever you want.  The function takes two parameters: `sprite` and `location`.  The `sprite` parameter is the player sprite (i.e. `dash_the_duck`) and the `location` parameter is the tile that was overlapped.  
+<.> The `def` keyword is how functions are defined in python.  This function is called `on_overlap_tile`. It's common, but a little confusing, to have the event name match the name function that is called when the event is triggered.  However, you can name the function what ever you want.  The function takes two parameters: `sprite` and `location`.  The `sprite` parameter is the player sprite (i.e. `dash_the_duck`) and the `location` is coordinates of the tile that was overlapped.  
 <.> Right now our function does nothing. The `pass` statement is a placeholder for code that we will add later.
 <.> `scene.on_overlap_tile` is the event that tells the game to call the `on_overlap_tile` function when the player sprite overlaps with the tile type we selected for the end of the maze.  
 - The `SpriteKind.player` parameter tells the game to only call this function when a player sprite overlaps with the tile type.
 - The `sprites.castle.tile_grass2` parameter is the tile type that we selected for the end of the maze.  This is the tile that will trigger the event.
-- The `on_overlap_tile` parameter is the function that will be called when the event is triggered.
+- The `on_overlap_tile` the name of function that will be called when the event is triggered.
 
 If having the the function and event named the same thing is confusing, you can change the function name to something else.  For example, you could change the function name to `on_end_of_maze`.  Just make sure to change the function name in both places.
 [source, python]
@@ -232,7 +230,7 @@ scene.on_overlap_tile(
     on_end_of_maze) 
 ----
 
-NOTE: If you switch back to the block editor, then back to the python editor again, you will see MadeCode Arcade has renamed the function back to the original name.
+NOTE: If you switch back to the block editor, then back to the Python editor again, you will see MakeCode renames the function back to the original name.
 
 Whew, that was a lot of new information!  We only have one more thing to do before we can run our code. We need to tell the program that the game is over and we won. 
 
