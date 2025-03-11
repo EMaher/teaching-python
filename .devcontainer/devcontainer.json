@@ -32,7 +32,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "gem install asciidoctor-pdf"
+	 "postCreateCommand": "gem install asciidoctor-pdf bigdecimal"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
