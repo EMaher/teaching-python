@@ -1,0 +1,6 @@
+Learn more about programming at <https://makecode.org>! Any skill level can use the MakeCode website.  It supports block programming, Python, and JavaScript.  See https://arcade.makecode.com/courses/csintro1/intro/makecode-orientation[Getting Started with MakeCode].
+
+image:https://pxt.azureedge.net/blob/9ab4abfcdff3405e5cca8a3c38e129aec2b363e3//static/logo.png[30,30]  Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] or https://arcade.makecode.com/courses/[online courses] and create https://arcade.makecode.com/:[arcade games].
+
+image:https://th.bing.com/th/id/OIP.xRDh4mO8Q6q7eJ9CZ5c5swAAAA?w=140&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7[30,30] Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
+

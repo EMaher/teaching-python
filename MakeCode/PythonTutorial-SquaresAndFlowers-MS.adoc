@@ -284,31 +284,12 @@ for flowers in range(3):
 
 == Lesson 6: Share your code! 
 
-In MakeCode, you can https://arcade.makecode.com/share[share your program] so that other people that use MakeCode Arcade can look at the code, run it and edit it. 
-
-On the top right, click the image:https://pxt.azureedge.net/blob/2e7e8fe72efed3ff7a9d33f0bfb142898b5bce7c/static/share/share-icon.png[30,30,title="Share"] icon.
-
-Give your project a title.
-
-image::https://pxt.azureedge.net/blob/abd9a0f7df3bd4da6e999222d5aeb8874508f3a1/static/share/share-project.png[]
-
-Clicking "Share Project" will create a link to your project. The link will be in the format `https://makecode.com/{code}`
-
-image::https://pxt.azureedge.net/blob/6e0bad39fe9657c51ec93e5bd0344c93c71d0100/static/share/anon-share-link.png[]
-
-These links are snapshots in time of a project. If you are signed in, you will have the option of creating a https://arcade.makecode.com/share[persistant link] that automatically updates everytime you update your code.  
-
-TIP: _Instructor note!_  If time allows, use the share links to show what students have created.
+include::sections/share_your_code.adoc[]
 
 == Lesson 7: Learn from others! 
 
-Learn more about programming at <https://makecode.org>! Any skill level can use the MakeCode website.  It supports block programming, Python, and JavaScript.  See https://arcade.makecode.com/courses/csintro1/intro/makecode-orientation[Getting Started with MakeCode].
+include::sections/learn_from_others.adoc[]
 
-image:https://pxt.azureedge.net/blob/9ab4abfcdff3405e5cca8a3c38e129aec2b363e3//static/logo.png[30,30]  Follow https://www.microsoft.com/en-us/makecode/teach/arcade?rtc=1:[tutorials] or https://arcade.makecode.com/courses/[online courses] and create https://arcade.makecode.com/:[arcade games].
-
-image:https://th.bing.com/th/id/OIP.xRDh4mO8Q6q7eJ9CZ5c5swAAAA?w=140&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7[30,30] Follow http://www.microsoft.com/makecode/teach/microbit[tutorials] and https://makecode.microbit.org/:[create programs for the microbit controllers].
-
-=== References
+== References
 * https://arcade.makecode.com/docs[MakeCode Arcade Documentation].
 * https://arcade.makecode.com/pkg/mr-coxall/turtle-logo[Turtle Extension] information and guided tutorials.
-
