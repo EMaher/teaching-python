@@ -290,7 +290,7 @@ include::sections/learn_from_others.adoc[]
 === Method References
 * Sprites
 ** https://arcade.makecode.com/reference/sprites/create[Sprites.create]
-https://arcade.makecode.com/reference/sprites/sprite/set-kind[Sprites.set_kind]
+** https://arcade.makecode.com/reference/sprites/sprite/set-kind[Sprites.set_kind]
 ** https://arcade.makecode.com/reference/sprites/sprite/set-position[Sprites.set_position]
 ** https://arcade.makecode.com/reference/controller/move-sprite[Controller.move_sprite]
 * Controller
