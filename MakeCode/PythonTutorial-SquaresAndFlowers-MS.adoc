@@ -1,24 +1,28 @@
 = Learn to Code with MakeCode Arcade!
 :source-highlighter: highlight.js
+:experimental:
 
 == Setup
 
 . Navigate to <https://arcade.makecode.com/>
 . https://arcade.makecode.com/identity/sign-in[Sign-in], if possible. +
-This step is not required.  If you do login, your code will be automatically saved. Log in using your https://account.microsoft.com/account[Microsoft Account], https://support.google.com/accounts/answer/14152768[Google Account] or by using https://support.clever.com/hc/s/articles/360026162691?language=en_US[Clever].
+This step is not required.  If you do log in, your code will be automatically saved. Log in using your https://account.microsoft.com/account[Microsoft Account] or https://support.google.com/accounts/answer/14152768[Google Account], or by using https://support.clever.com/hc/s/articles/360026162691?language=en_US[Clever].
 . Create a new project.
-. Set the editor to 'Python'mode.
-. Add the 'Turtle' Extension
+. Set the editor to 'Python' mode.
+. Add the 'Turtle' Extension:
     .. Select '+ Extensions' button.
-    .. Search for `turtle`
-    .. Select the `turtle-logo` extension
+    .. Search for `turtle`.
+    .. Select the `turtle-logo` extension.
 
 .MakeCode Arcade editor with `turtle-logo` extension
 image::Images/MakeCode-Editor-PythonMode.png[]
 
 == Lesson 1: The Basics 
 
-TIP: Pro-Tip: BE LAZY! Start typing and hit tab or enter to complete the code. Use the up and down arrow buttons to scroll through the methods. 
+[TIP]
+====
+Pro-Tip: BE LAZY! Start typing and hit kbd:[Tab] or kbd:[Enter] to complete the code. Use the kbd:[↑] and kbd:[↓] arrow buttons to scroll through the methods. 
+====
 
 If you're new to programming, you might hear some new things—we're going to define them here for you!
 
@@ -54,7 +58,7 @@ Click the image:Images/run_code.png[20,20] button.  What does it do?
 
 Let's make that turtle move! 
 
-NOTE: Don't be intimidated by the length of the code below. Python programmers like to use descriptive names for their methods.  A method named `jump()` in one programming language is named `jump_as_high_as_possible()` in Python.
+NOTE: Don't be intimidated by the length of the code below. Python programmers like to use descriptive names for their methods.  For example, a method named `jump()` in one programming language is named `jump_as_high_as_possible()` in Python.
 
 Type the following code in Python:
 
@@ -70,7 +74,7 @@ turtle.move_turtle_direction(TurtleDirection.FORWARD, 25)
 turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 90)
 ----
 <.> The `move_turtle_direction()` method moves the turtle forward a certain number of pixels. The `TurtleDirection.FORWARD` is an argument that tells the `move_turtle_direction()` which direction to move the turtle. The `25` is an argument that tells the `move_turtle_direction()` method how many pixels we want our turtle to move.
-<.> The `turn_turtle_direction_by_degrees()` method rotates the turtle a certain number of degrees. `TurtleTurnDirection.RIGHT` tells the method we want the turtle to turn to the right.  The `90` is an argument that tells the `turn_turtle_direction_by_degrees()` method how many degrees we want our turtle to turn.
+<.> The `turn_turtle_direction_by_degrees()` method rotates the turtle a certain number of degrees. `TurtleTurnDirection.RIGHT` tells the method we want the turtle to turn to the right.  The `90` is an argument that tells the `turn_turtle_direction_by_degrees()` method how many degrees we want the turtle to turn.
 
 TIP: To make this go a little faster, you can use copy and paste.  (Ctrl+C and Ctrl+V on Windows.) 
 
@@ -186,7 +190,7 @@ NOTE: Did you notice that background color is part of the `scene` object and not
 
 == Lesson 4: Loops 
 
-A *loop* is a type of programming where you tell the same code to run multiple times. It usually means you have a little less code to write! Today, we will use a `for` loop. There are other kinds of loops, too.
+A *loop* is a programming statement where you tell the same code to run multiple times. It usually means you have a little less code to write! Today, we'll use a `for` loop. There are other kinds of loops, too.
 
 === Create a square
 Type the following code in your text editor.  Don't forget to remove the old repeated code.
@@ -204,23 +208,23 @@ Click the image:Images/run_code.png[20,20] button.  What does it do?
 
 image::Images/MakeCode-Turtle-Square.png[title="Turtle draws a square."]
 
-You might be wondering what is `sides` in `range(4)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. We use this to tell the loop how many times to repeat.
+You might be wondering what is `sides` in `range(4)`. The word `sides` is called a variable. A variable is a place where you can store a little piece of information to use in your program. You use this to tell the loop how many times to repeat.
 
 How does it work? This is where the `range(4)` comes in.  It creates a list of numbers: `(0,1,2,3)`.  (Programmers like zero-based lists, which is why the list is 0-3 and not 1-4.)  Every time it goes through the loop, the `sides` variable is assigned to the value of the next item in the list.  Since there are four items in the list, the code inside the `for` loop is executed four times. 
 
 Click the image:Images/run_code.png[20,20] button.  What does it do? 
 
-One way to see the effect of each loop this is to make a slight change to the code above.  Did you know you can choose a random pen color?  Let's try that. Remember colors are defined in MakeCode Arcade by integers (whole numbers) from 0 to 15. Let's update the code: 
+One way to see the effect of each loop this is to make a slight change to the code above.  Did you know you can choose a random pen color?  Let's try that. Remember, colors are defined in MakeCode Arcade by integers (whole numbers) from 0 to 15. Let's update the code: 
 
 [source,python]
 ----
 turtle.show_turtle()
 for sides in range(4):
-    turtle.set_pen_color(randint(0, 14)) #<.>
+    turtle.set_pen_color(randint(1, 14)) #<.>
     turtle.move_turtle_direction(TurtleDirection.FORWARD, 25) 
     turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 90)
 ----
-<.> `randint()` is a function that will return a random whole number a between the start and end numbers (inclusive). We have asked for a random number between 0 and 14.  Black (15) is not included to avoid the appearance of a disappearing line.
+<.> `randint()` is a function that will return a random whole number a between the start and end numbers (inclusive). We have asked for a random number between 1 and 14.  Black (15) is not included to avoid the appearance of a disappearing line.
 
 Try again! Click the image:Images/run_code.png[20,20] button.  What does it do? 
 
@@ -234,14 +238,14 @@ You can nest loops in one another—so one loop can run another loop. We're goin
 turtle.show_turtle()
 turtle.set_speed(85)
 
-for pedals in range(20): #<.>
+for petals in range(20): #<.>
     for sides in range(4): #<.>
         turtle.move_turtle_direction(TurtleDirection.FORWARD, 25)
         turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 90)
     turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 18)
 ----
-<.> This loop determines how many flower pedals we're going to make. 
-<.> This loop determines how many sides each pedal has. Our flower is made of square-shaped pedals.
+<.> This loop determines how many flower petals to make.
+<.> This loop determines how many sides each petal has. Our flower is made of square-shaped petals.
 
 Click the image:Images/run_code.png[20,20] button.  What does it do?
 
@@ -249,16 +253,16 @@ image::Images/MakeCode-Turtle-Flower.png[title="Turtle draws a flower."]
 
 ====
 .Challenge!
-* Where would you put code to change the color of each side of the pedal? 
-* Can you make the pedals a different shape?  
-* Can you increase the number of pedals?
+* Where would you put code to change the color of each side of the petal?
+* Can you make the petals a different shape? 
+* Can you increase the number of petals?
 
-TIP: The number of `sides` or `pedals` multiplied by the degrees specified in `turn_turtle_direction_by_degrees` must equal 360.
+TIP: The number of `sides` or `petals` multiplied by the degrees specified in `turn_turtle_direction_by_degrees` must equal 360.
 ====
 
 === Creating many flowers
 
-Let's to draw multiple randomly placed flowers. To move the turtle without drawing a line, use `turtle.pen()` and `turtle.set_position_cartesian()` methods. 
+Let's try to draw multiple randomly placed flowers. To move the turtle without drawing a line, use `turtle.pen()` and `turtle.set_position_cartesian()` methods. 
 
 [source, python]
 ----
@@ -270,7 +274,7 @@ for flowers in range(3):
     turtle.set_pen_color(randint(0, 14)) #<.>
     turtle.set_position_cartesian(randint(-35, 35), randint(-35, 35)) #<.>
     turtle.pen(TurtlePenMode.DOWN) #<.>
-    for pedals in range(20):
+    for petals in range(20):
         for sides in range(4):
             turtle.move_turtle_direction(TurtleDirection.FORWARD, 20) #<.>
             turtle.turn_turtle_direction_by_degrees(TurtleTurnDirection.RIGHT, 90)
