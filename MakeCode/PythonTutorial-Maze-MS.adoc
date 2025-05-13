@@ -15,7 +15,10 @@ image::Images/MakeCode-Editor.png[]
 
 == Lesson 1: The Basics 
 
-TIP: Pro-Tip: BE LAZY! Start typing and hit tab or enter to complete the code. Use the up and down arrow buttons to scroll through the methods. 
+[TIP]
+====
+Pro-Tip: BE LAZY! Start typing and hit kbd:[Tab] or kbd:[Enter] to complete the code. Use the up and down arrow buttons to scroll through the methods. 
+====
 
 If you're new to programming, you might hear some new things—we're going to define them here for you!
 
